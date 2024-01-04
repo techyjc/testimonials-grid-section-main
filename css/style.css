@@ -71,6 +71,7 @@ body {
 
 .testimonial {
     border-radius: 10px;
+    box-shadow: 5px 12px 30px var(--neutral-col-100);
     font-family: var(--ff);
     padding: 1.2rem 1rem;
     position: relative;
