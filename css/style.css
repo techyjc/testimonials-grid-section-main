@@ -1,0 +1,225 @@
+:root {
+
+    --primary-col-100: hsl(263, 55%, 52%);
+    --primary-col-200: hsl(217, 19%, 35%);
+    --primary-col-300: hsl(219, 29%, 14%);
+    --primary-col-400: hsl(0, 0%, 100%);
+
+    --neutral-col-100: hsl(0, 0%, 81%);
+    --neutral-col-200: hsl(210, 46%, 95%);
+
+    --ff: 'Barlow Semi Condensed', sans-serif;
+    --ff-size-500: 13px;
+
+    --destop-width: 1440px;
+    --mobile-width: 375px;
+}
+
+.avatar-border1 {
+    border: 2px solid hsl(263, 55%, 68%);
+}
+
+.avatar-border2 {
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+
+body {
+    align-items: center;
+    background-color: var(--neutral-col-200);
+    display: grid;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    min-width: 375px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+@media screen and (min-width:1300px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "testimonial1"
+            "testimonial2"
+            "testimonial3"
+            "testimonial4"
+            "testimonial5"
+            "testimonial6";
+
+        grid-template-areas:
+            "testimonial1 testimonial1 testimonial2 testimonial5"
+            "testimonial3 testimonial4 testimonial4 testimonial5";
+            
+        /* grid-template-rows: 47% 44%; */
+        gap: 2rem;
+        margin: 0 auto;
+        margin: 5rem;
+        max-width: 1440px;
+    }
+}
+
+
+
+.testimonial {
+    border-radius: 10px;
+    font-family: var(--ff);
+    padding: 1.2rem 1rem;
+    position: relative;
+}
+
+.avatar-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.avatarimage {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    width: 32px;
+    margin-right: 1rem;
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name, .status {
+    display: block;
+}
+
+.status {
+    opacity: 0.5;
+    font-size: 0.85rem;
+}
+
+.t-subject {
+    font-size: 1.6rem;
+}
+
+.person-dc {
+    background-color: var(--primary-col-100);
+    grid-area: testimonial1;
+}
+
+.person-jw {
+    color: var(--neutral-col-100);
+    background-color: var(--primary-col-200);
+    grid-area: testimonial2;
+}
+
+.person-jh {
+    background-color: var(--primary-col-400);
+    grid-area: testimonial3;
+}
+
+.person-pa {
+    background-color: var(--primary-col-300);
+    grid-area: testimonial4;
+}
+
+.person-kw {
+    background-color: var(--primary-col-400);
+    grid-area: testimonial5;
+}
+
+.person-dc .name {
+    color: var(--neutral-col-100);
+}
+
+.person-jw .name {
+    color: var(--neutral-col-100);
+}
+
+.person-pa .name, .status {
+    color: var(--neutral-col-100);
+}
+
+.person-jh .status,
+.person-kw .status {
+    color: var(--neutral-col-400);
+    opacity: 0.5;
+}
+
+
+
+.testimonial .t-statement {
+    font-size: 1.1rem;
+    /* font-weight: var(--ff-size-500); */
+    line-height: 1.4;
+}
+
+.person-dc {
+    isolation: isolate;
+}
+
+.person-dc::before {
+    aspect-ratio: 1 / 1;
+    content: '';
+    background: url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: absolute;
+    height: 100px;
+    right: 169px;
+    top: 8px;
+    transform: scale(1.2, 1.2);
+    z-index: -1;
+}
+
+.person-dc .t-subject {
+    color: var(--primary-col-400);
+}
+
+.person-jw .t-subject {
+    color: var(--primary-col-400);
+}
+
+.person-jh .t-subject {
+    color: var(--primary-col-200);
+}
+
+.person-kw .t-subject {
+    color: var(--primary-col-200);
+}
+
+.person-pa .t-subject {
+    color: var(--primary-col-400);
+}
+
+.person-dc .t-statement {
+    color: var(--neutral-col-100);
+    opacity: 0.6;
+}
+
+.person-pa .t-statement {
+    color: var(--neutral-col-100);
+    opacity: 0.6;
+}
+
+.person-kw .t-statement {
+    color: var(--primary-col-200);
+}
+
+.person-jh .t-statement {
+    color: var(--primary-col-200);
+    opacity: 0.6;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
